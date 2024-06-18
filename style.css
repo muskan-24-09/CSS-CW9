@@ -1,0 +1,61 @@
+/* Reset and base styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 100vh;
+    background-color: rgb(14, 14, 14);
+    margin: 0;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px; /* Add padding for better spacing */
+}
+
+img {
+    max-width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    background-color: hsl(0, 0%, 90%);
+    transition: background-color 300ms;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .image-container {
+        padding: 5px; /* Reduce padding on smaller screens */
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .image-container {
+        padding: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+}
